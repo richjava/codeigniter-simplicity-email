@@ -63,7 +63,7 @@ class Contact extends CI_Controller {
 	} else {//if validates
 	    if ($this->_send_email()) {
 		$this->session->set_flashdata('success', 'Thank you for contacting us. We will be in touch shortly.');
-		$this->load->view('pages/contact');
+		redirect("/site", 'refresh');
 	    } else {
 		show_error($this->email->print_debugger());
 	    }
