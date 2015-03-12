@@ -1,5 +1,10 @@
 <h1>Welcome!</h1>
-
+<?php
+//success message
+if ($this->session->flashdata('success')):
+    ?>
+    <div class="alert alert-success" role="alert"><?php echo $this->session->flashdata('success'); ?></div>
+<?php endif; ?>
 <p class="p">Welcome to the NetBeans PHP IDE sample - <b>TODO List application</b>.</p>
 <ul class="p">
     This sample does not use any PHP framework, it will show you possibilities how to:
